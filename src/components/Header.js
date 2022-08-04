@@ -13,7 +13,7 @@ function Header(){
                  </div>
            <div>
              <Link className="p-1 font-medium text-gray-900 sm:p-4 dark:text-gray-100" to="/">Home</Link>
-             <a className="p-1 font-medium text-gray-900 sm:p-4 dark:text-gray-100" href="#">GitHub</a>
+             <a className="p-1 font-medium text-gray-900 sm:p-4 dark:text-gray-100" href="https://github.com/angelb2m/PRUEBAREACT">GitHub</a>
            </div>
           </div>
       </div>
