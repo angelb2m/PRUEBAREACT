@@ -2,7 +2,6 @@
   "name": "cradoor",
   "version": "0.0.1",
   "private": true,
-  "proxy": "http://54.177.198.128:8001",
   "dependencies": {
     "@tailwindcss/forms": "^0.5.0",
     "@tailwindcss/typography": "^0.5.2",
