@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {setLoading,setParents} from "../../actions";
-import {getParentsOffline} from "../../api/api";
+import {getParents} from "../../api/api";
 import Card from "../../components/Card";
 
 function Home(){
@@ -14,7 +14,8 @@ function Home(){
   useEffect(() => {
     const fetchParents = async () => {
       dispatch(setLoading(true));
-      const parentsRes = await getParentsOffline();
+      const parentsRes = await getParents();
+      console.log("getParents: ",parentsRes);
       dispatch(setParents(parentsRes.data));
       dispatch(setLoading(false));
     };
