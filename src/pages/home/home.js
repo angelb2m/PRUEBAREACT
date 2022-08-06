@@ -15,7 +15,6 @@ function Home(){
     const fetchParents = async () => {
       dispatch(setLoading(true));
       const parentsRes = await getParentsOffline();
-      console.log("getParents: ",parentsRes);
       dispatch(setParents(parentsRes.data));
       dispatch(setLoading(false));
     };

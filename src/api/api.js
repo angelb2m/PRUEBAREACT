@@ -1,10 +1,10 @@
 import axios from 'axios';
 import {PARENTSDATA} from "../data/parents"; 
-const BASEURL = "http://54.177.198.128:8001/api"
+const BASEURL = "https://myproxyb2m.herokuapp.com/http://54.177.198.128:8001/api"
 
 export const getParents = async () => {
   return await axios
-    .get(`${BASEURL}/cat-amenities-parents`)
+    .get(`${BASEURL}https://myproxyb2m.herokuapp.com/http://54.177.198.128:8001/api/cat-amenities-parents`)
     .then((res) => res.data)
     .catch((err) => console.log(err));
 };
