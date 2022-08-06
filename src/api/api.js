@@ -1,33 +1,29 @@
-import {PARENTSDATA} from "../data/parents";
-const BASEURL= "http://54.177.198.128:8001/api"
+import axios from 'axios';
+import {PARENTSDATA} from "../data/parents"; 
+const BASEURL = "http://54.177.198.128:8001/api"
 
-class Api {
+export const getParents = async () => {
+  return await axios
+    .get(`${BASEURL}/cat-amenities-parents`)
+    .then((res) => res.data)
+    .catch((err) => console.log(err));
+};
 
-    getParents =  () => {
-       const query = PARENTSDATA;
-       return (
-        query
-    )
-    }
+export const getChilds = async (id) => {
+  return await axios
+  .get(`${BASEURL}/cat-amenities-childs/?amenity_parent_id=${id}`)
+  .then((res) => res.data)
+    .catch((err) => console.log(err));
+};
 
-    /*
-    getParents = async () => {
-        const query = await fetch(`${BASEURL}/cat-amenities-parents`)
-        const parents = await query.json();
-          return (
-            parents
-        )
-      }
-    */
+export const getItemById = async (parentId, itemId) => {
+  return await axios
+  .get(`${BASEURL}/cat-amenities-childs/?amenity_parent_id=${parentId}&id=${itemId}`)
+  .then((res) => res.data)
+    .catch((err) => console.log(err));
+};
 
-    getChilds = async (id) => {
-      const query = await fetch(`${BASEURL}/cat-amenities-childs/?amenity_parent_id=${id}`)
-      const childs = await query.json();
-        return (
-            childs
-      )
-    }
-  
-  }
+export const getParentsOffline = () => {
+   return PARENTSDATA
+}
 
-export default new Api();

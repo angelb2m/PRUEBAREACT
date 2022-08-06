@@ -1,4 +1,5 @@
-export const PARENTSDATA = [
+export const PARENTSDATA = {
+    "data": [
         {
             "id": 1,
             "property_category_id": 1,
@@ -19,5 +20,7 @@ export const PARENTSDATA = [
             "updated_at": "2022-04-15T18:35:46.426595Z",
             "created_by": "Doorvel-TI"
         }
-    ]
+    ],
+    "date_recived": {}
+}
 
